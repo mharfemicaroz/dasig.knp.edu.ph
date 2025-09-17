@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables.css";
+@import "./styles/_table.css";
+@import "./styles/_checkbox-radio-switch.css";
+@import "./styles/_progress.css";
+@import "./styles/_scrollbars.css";
+
+@import "tailwindcss";

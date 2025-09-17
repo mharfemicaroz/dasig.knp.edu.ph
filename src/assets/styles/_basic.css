@@ -1,0 +1,33 @@
+@layer components {
+  .style-basic:not(.dark) {
+    .aside {
+      @apply bg-[#9B1A1B];
+    }
+    .aside-scrollbars {
+      /* Define the custom class here */
+      scrollbar-color: #9b1a1b #f5eaea;
+      scrollbar-width: thin;
+    }
+    .aside-brand {
+      @apply bg-[#8A1718] text-white;
+    }
+    .aside-menu-item {
+      @apply text-[#F5EAEA] hover:text-white;
+    }
+    .aside-menu-item-active {
+      @apply text-white;
+    }
+    .aside-menu-dropdown {
+      @apply bg-[#B52020]/50;
+    }
+    .navbar-item-label {
+      @apply text-[#9B1A1B] hover:text-[#8A1718];
+    }
+    .navbar-item-label-active {
+      @apply text-[#8A1718];
+    }
+    .overlay {
+      @apply from-[#B52020] via-[#9B1A1B] to-[#8A1718];
+    }
+  }
+}

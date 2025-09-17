@@ -1,0 +1,31 @@
+:root {
+  /* Adjust these values to change the complementary theme */
+  --primary-color: #22258c; /* Main theme color (deep blue) */
+  --secondary-color: #1b1e73; /* Darker shade of primary */
+  --tertiary-color: #2f33a6; /* Slightly lighter shade for hover/active */
+  --accent: #8c8922; /* Complementary accent (mustard/golden hue) */
+  --primary-text: #171963; /* Deep text color matching primary shades */
+}
+
+/* Background color classes */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+.bg-tertiary {
+  background-color: var(--tertiary-color) !important;
+}
+
+/* Accent helpers (optional) */
+
+/* Text color classes */
+.text-primary-text {
+  color: var(--primary-text) !important;
+}
+
+/* Border color classes */
+.border-t-accent {
+  border-top-color: var(--accent) !important;
+}
