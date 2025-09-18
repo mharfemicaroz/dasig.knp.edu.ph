@@ -10,10 +10,7 @@
             </div>
         </div>
 
-        <!-- Loading overlay -->
-        <div v-if="auth.isLoading" class="absolute inset-0 z-50 grid place-items-center bg-black/40 backdrop-blur-md">
-            <div class="loader"></div>
-        </div>
+        <!-- Page-level loader removed; global overlay is used. -->
 
         <!-- Registration form -->
         <div class="relative z-10 min-h-screen flex items-center justify-center p-4">

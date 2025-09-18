@@ -5,8 +5,7 @@ import {
     Chart, BarController, BarElement, CategoryScale,
     LinearScale, Tooltip, Legend
 } from 'chart.js'
-import { useLoading } from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/css/index.css'
+// component-level loader removed; rely on global loader
 
 /* ── props ───────────────────────────────────────── */
 const props = defineProps({
@@ -23,18 +22,7 @@ let chart
 
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
-/* loading overlay (same as before) */
-const $loading = useLoading()
-const loaderInstance = ref(null)
-watch(() => props.loading, val => {
-    if (val && !loaderInstance.value) {
-        loaderInstance.value = $loading.show({ container: chartContainer.value, isFullPage: false, color: '#3b82f6', opacity: .8 })
-    }
-    if (!val && loaderInstance.value) { loaderInstance.value.hide(); loaderInstance.value = null }
-}, { immediate: true })
-
 onBeforeUnmount(() => {
-    loaderInstance.value?.hide()
     chart?.destroy()
 })
 

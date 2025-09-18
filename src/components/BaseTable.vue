@@ -178,10 +178,7 @@
                 </tbody>
             </table>
 
-            <!-- Loading overlay (customizable) -->
-            <slot name="loading-overlay" v-if="loading">
-                <!-- default loader is handled by vue-loading-overlay; this is a slot if you want a custom one -->
-            </slot>
+            <!-- Loading overlay removed; global overlay is used instead. -->
         </div>
 
         <!-- Pagination Footer (override-capable) -->
@@ -216,8 +213,7 @@
 
 <script setup>
 import { ref, computed, watch, onMounted, onBeforeUnmount, defineProps, defineEmits } from 'vue'
-import { useLoading } from 'vue-loading-overlay'
-import 'vue-loading-overlay/dist/css/index.css'
+// Component-level loading overlay removed; global overlay handles API activity.
 
 import TableCheckboxCell from '@/components/commons/TableCheckboxCell.vue'
 import BaseButton from '@/components/commons/BaseButton.vue'
@@ -257,37 +253,7 @@ const emit = defineEmits(['query-change', 'selected', 'sort', 'filter', 'edit'])
 /* Refs */
 const tableContainer = ref(null)
 
-/* Loading overlay */
-const $loading = useLoading()
-const loaderInstance = ref(null)
-watch(
-    () => props.loading,
-    (newVal) => {
-        if (newVal) {
-            if (!loaderInstance.value) {
-                loaderInstance.value = $loading.show({
-                    container: tableContainer.value,
-                    canCancel: false,
-                    isFullPage: false,
-                    color: '#3b82f6',
-                    opacity: 0.8
-                })
-            }
-        } else {
-            if (loaderInstance.value) {
-                loaderInstance.value.hide()
-                loaderInstance.value = null
-            }
-        }
-    },
-    { immediate: true }
-)
-onBeforeUnmount(() => {
-    if (loaderInstance.value) {
-        loaderInstance.value.hide()
-        loaderInstance.value = null
-    }
-})
+// No local overlay lifecycle.
 
 /* State */
 const internalPage = ref(props.data.currentPage || 1)

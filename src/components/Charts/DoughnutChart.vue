@@ -1,8 +1,7 @@
     <script setup>
     import { ref, watch, computed, onMounted, onBeforeUnmount } from 'vue'
     import { Chart, DoughnutController, ArcElement, Tooltip, Legend } from 'chart.js'
-    import { useLoading } from 'vue-loading-overlay'
-    import 'vue-loading-overlay/dist/css/index.css'
+    // component-level loader removed; rely on global loader
 
     // Define props including a loading prop.
     const props = defineProps({
@@ -23,39 +22,7 @@
 
     Chart.register(DoughnutController, ArcElement, Tooltip, Legend)
 
-    // Setup loading overlay.
-    const $loading = useLoading()
-    const loaderInstance = ref(null)
-
-    watch(
-        () => props.loading,
-        (newVal) => {
-            if (newVal) {
-                if (!loaderInstance.value) {
-                    loaderInstance.value = $loading.show({
-                        container: chartContainer.value,
-                        canCancel: false,
-                        isFullPage: false,
-                        color: '#3b82f6',
-                        opacity: 0.8
-                    })
-                }
-            } else {
-                if (loaderInstance.value) {
-                    loaderInstance.value.hide()
-                    loaderInstance.value = null
-                }
-            }
-        },
-        { immediate: true }
-    )
-
-    onBeforeUnmount(() => {
-        if (loaderInstance.value) {
-            loaderInstance.value.hide()
-            loaderInstance.value = null
-        }
-    })
+    // no component-level overlay lifecycle
 
     onMounted(() => {
         chart = new Chart(root.value, {
