@@ -20,7 +20,7 @@
                 <!-- Header -->
                 <div class="mb-6 text-center">
                     <a href="index.html" class="inline-flex items-center justify-center">
-                        <img src="/images/logo.png" alt="OSAS" class="h-14 w-auto" />
+                        <img src="/images/logo.png" alt="DASIG" class="h-14 w-auto" />
                     </a>
                     <h1 class="mt-4 text-2xl font-extrabold tracking-wide text-white">
                         Office of Student Affairs & Services
@@ -44,9 +44,13 @@
                         </div>
 
                         <div class="space-y-3">
-                            <BaseButton color="primary" class="w-full justify-center" :disabled="!displayEmail || cooldown > 0 || auth.isLoading" :label="cooldown === 0 ? 'Resend verification email' : `Resend in ${cooldown}s'" @click="onResend" />
+                            <BaseButton color="primary" class="w-full justify-center"
+                                :disabled="!displayEmail || cooldown > 0 || auth.isLoading"
+                                :label="cooldown === 0 ? 'Resend verification email' : `Resend in ${cooldown}s'"
+                                @click="onResend" />
 
-                            <BaseButton type="button" color="info" class="w-full justify-center" label="Open my inbox" @click="openInbox" />
+                            <BaseButton type="button" color="info" class="w-full justify-center" label="Open my inbox"
+                                @click="openInbox" />
                         </div>
 
                         <div class="mt-4 text-xs text-gray-600 space-y-1 text-center">

@@ -17,12 +17,13 @@
             <div class="w-full max-w-md">
                 <div class="mb-6 text-center">
                     <a href="index.html" class="inline-flex items-center justify-center">
-                        <img src="/images/osas.png" alt="OSAS" class="h-14 w-auto" />
+                        <img src="/images/DASIG.png" alt="DASIG" class="h-14 w-auto" />
                     </a>
                     <h1 class="mt-4 text-2xl font-extrabold tracking-wide text-white">
                         DASIG – Dashboard for Academic Systems, Information & Governance
                     </h1>
-                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”</p>
+                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”
+                    </p>
                 </div>
 
                 <div
@@ -93,12 +94,14 @@
                             <!-- Forgot password -->
                             <div class="flex items-center justify-between">
                                 <span class="text-sm text-gray-700">&nbsp;</span>
-                                <BaseButton small outline color="secondary" label="Forgot password?" @click="forgotPassword" />
+                                <BaseButton small outline color="secondary" label="Forgot password?"
+                                    @click="forgotPassword" />
                             </div>
 
                             <!-- Submit -->
                             <div class="pt-1">
-                                <BaseButton color="primary" type="submit" :disabled="!canSubmit || auth.isLoading" label="Log In" class="w-full justify-center" />
+                                <BaseButton color="primary" type="submit" :disabled="!canSubmit || auth.isLoading"
+                                    label="Log In" class="w-full justify-center" />
                             </div>
 
                             <!-- Divider -->
@@ -113,7 +116,8 @@
 
                             <!-- Google -->
                             <div>
-                                <BaseButton color="primary" class="w-full justify-center" :disabled="auth.isLoading" label="Sign in with School Account" @click="signInWithSchoolAccount" />
+                                <BaseButton color="primary" class="w-full justify-center" :disabled="auth.isLoading"
+                                    label="Sign in with School Account" @click="signInWithSchoolAccount" />
                             </div>
 
                             <!-- Register -->
@@ -127,7 +131,7 @@
 
                     <div class="px-6 sm:px-7 pb-6">
                         <div class="flex items-center justify-between text-[11px] text-gray-500">
-                            <span>OSAS Kiosk v1.0</span>
+                            <span>DASIG Kiosk v1.0</span>
                             <span>© {{ new Date().getFullYear() }} Student Services</span>
                         </div>
                     </div>

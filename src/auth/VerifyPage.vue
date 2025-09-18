@@ -22,12 +22,13 @@
                 <!-- Header -->
                 <div class="mb-6 text-center">
                     <a href="index.html" class="inline-flex items-center justify-center">
-                        <img src="/images/logo.png" alt="OSAS" class="h-14 w-auto" />
+                        <img src="/images/logo.png" alt="DASIG" class="h-14 w-auto" />
                     </a>
                     <h1 class="mt-4 text-2xl font-extrabold tracking-wide text-white">
                         DASIG – Dashboard for Academic Systems, Information & Governance
                     </h1>
-                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”</p>
+                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”
+                    </p>
                 </div>
 
                 <!-- Card -->
@@ -52,7 +53,8 @@
                                 <i class="mdi mdi-check-circle-outline text-lg"></i>
                                 <span>Your email has been verified. You can now sign in.</span>
                             </div>
-                            <BaseButton color="primary" class="mt-3 w-full justify-center" label="Go to Login" @click="goLogin" />
+                            <BaseButton color="primary" class="mt-3 w-full justify-center" label="Go to Login"
+                                @click="goLogin" />
                         </div>
 
                         <!-- Error -->
@@ -86,16 +88,19 @@
                                     autocomplete="email" />
                             </div>
 
-                            <BaseButton color="primary" class="w-full justify-center" type="submit" :disabled="!canSubmit || auth.isLoading || verifying" label="Resend Verification Email" />
+                            <BaseButton color="primary" class="w-full justify-center" type="submit"
+                                :disabled="!canSubmit || auth.isLoading || verifying"
+                                label="Resend Verification Email" />
 
-                            <BaseButton type="button" color="secondary" outline class="w-full justify-center" label="Back to Login" @click="goLogin" />
+                            <BaseButton type="button" color="secondary" outline class="w-full justify-center"
+                                label="Back to Login" @click="goLogin" />
                         </form>
                     </div>
 
                     <!-- Footer -->
                     <div class="px-6 sm:px-7 pb-6">
                         <div class="flex items-center justify-between text-[11px] text-gray-500">
-                            <span>OSAS Kiosk v1.0</span>
+                            <span>DASIG Kiosk v1.0</span>
                             <span>© {{ new Date().getFullYear() }} Student Services</span>
                         </div>
                     </div>

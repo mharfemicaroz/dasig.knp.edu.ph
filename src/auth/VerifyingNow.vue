@@ -18,11 +18,12 @@
         <div class="relative z-10 min-h-screen flex items-center justify-center p-4">
             <div class="w-full max-w-md">
                 <div class="mb-6 text-center">
-                    <img src="/images/logo.png" alt="OSAS" class="h-14 w-auto mx-auto" />
+                    <img src="/images/logo.png" alt="DASIG" class="h-14 w-auto mx-auto" />
                     <h1 class="mt-4 text-2xl font-extrabold tracking-wide text-white">
                         DASIG – Dashboard for Academic Systems, Information & Governance
                     </h1>
-                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”</p>
+                    <p class="mt-1 text-primary-text/90 text-sm">“DASIG: Energizing Academic Leadership and Governance.”
+                    </p>
                 </div>
 
                 <div
@@ -59,7 +60,7 @@
 
                     <div class="px-6 sm:px-7 pb-6">
                         <div class="flex items-center justify-between text-[11px] text-gray-500">
-                            <span>OSAS Kiosk v1.0</span>
+                            <span>DASIG Kiosk v1.0</span>
                             <span>© {{ new Date().getFullYear() }} Student Services</span>
                         </div>
                     </div>
